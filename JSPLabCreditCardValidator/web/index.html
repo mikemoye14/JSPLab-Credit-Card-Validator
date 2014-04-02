@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JSP Lab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./js/jquery-latest.js"></script>
+        <script src="./js/validateLocal.js"></script>
+    </head>
+    <body>        
+        <h2>JSP Lab</h2>
+        <form id="form" method="POST" action="index.jsp">
+            <div style="width: 100%;">
+                <table style="margin: auto;">
+                    <tr>
+                        <td>
+                            <span id="info" style="color: red;">Fill out form to begin.</span>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin: auto; border: black solid thin">
+                    <tr>
+                        <th colspan="3" style="text-align: center; background-color: #0066FF; color: #ffffff; padding: 5px; font-weight: bolder; font-size: 14pt;">Credit Card Validation</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right; padding: 5px;">Name:</td>
+                        <td></td>
+                        <td style="padding: 5px;">
+                            <input type="text" id="name" name="name" />
+                        </td>
+                    </tr>
+                    <tr id="noName" style="display: none;">
+                        <td colspan="3" style="color: red; text-align: center;">Please enter a name.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right; padding: 5px;">Card Number:</td>
+                        <td></td>
+                        <td style="padding: 5px;">
+                            <input type="text" id="cardNum" name="cardNum" />
+                        </td>
+                    </tr>
+                    <tr id="invalidLength" style="display: none;">
+                        <td colspan="3" style="color: red; text-align: center;">The credit card number is an invalid length.</td>
+                    </tr>
+                    <tr id="nan" style="display: none;">
+                        <td colspan="3" style="color: red; text-align: center;">The credit card number must only contain numbers.</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right; padding: 5px;">Exp:</td>
+                        <td></td>
+                        <td style="padding: 5px;">
+                            <select id="exp" name="exp">
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="expError" style="display: none;">
+                        <td colspan="3" style="color: red; text-align: center;">Please select an expiration date.</td>
+                    </tr>
+                </table>
+                <table style="margin: auto;">
+                    <tr>
+                        <td>
+                            <input id="submit" type="submit" value="Submit" />                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        
+        <script>
+            $(document).ready(function(){
+                
+                     
+            });
+        </script>
+    </body>
+</html>
